@@ -2,9 +2,7 @@
 curlよりdocker-compose.yamlを取得します。
 
 ```
-
 curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.3.0/docker-compose.yaml'
-
 ```
 
 
@@ -18,5 +16,10 @@ docker-compose.yaml66行目にvolumesを追加します
     - ./plugins:/opt/airflow/plugins
     - ./dbt:/dbt # add this in
     - ./dags:/dags # add this in
+```
 
+`.env`ファルに以下を追加します
+
+```
+_PIP_ADDITIONAL_REQUIREMENTS=dbt==0.19.0 
 ```
