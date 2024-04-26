@@ -1,13 +1,11 @@
 # 環境設定
-curlよりdocker-compose.yamlを取得します。
+## ターミナルで次のコマンドを実行してください:
 
 ```
 curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.3.0/docker-compose.yaml'
 ```
 
-
-
-docker-compose.yaml66行目にvolumesを追加します
+## 追加されたdocker-compose.yamlのvolumesを次のように置き換えてください:
 
 ```
   volumes:
@@ -18,8 +16,29 @@ docker-compose.yaml66行目にvolumesを追加します
     - ./dags:/dags # add this in
 ```
 
-`.env`ファルに以下を追加します
+## `.env`ファルを作成し次の環境変数を追加してください:
 
 ```
 _PIP_ADDITIONAL_REQUIREMENTS=dbt==0.19.0 
 ```
+
+## `dbt init dbt`を実行してください
+### dbtのインストール方法(dbt-snoflake編)
+```
+$ brew update
+$ brew install git  
+$ brew tap dbt-labs/dbt
+$ brew install dbt-snowflake
+```
+
+
+#  DBTプロジェクトの設定
+Snowflake ワークシートで次のコマンドを実行してください:
+```
+use role SYSADMIN;
+use database <YOUR_DB>;
+create schema <FREE_NAME>;
+```
+
+実行後、schemaが作られていることが確認できます。
+
