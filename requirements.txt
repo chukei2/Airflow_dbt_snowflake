@@ -1,0 +1,3 @@
+dbt-core==1.7.3
+dbt-snowflake==1.7.3
+# protobuf==4.25.3 # 「TypeError: MessageToJson() got an unexpected keyword argument 'including_default_value_fields'」が出たらコメント外してください
