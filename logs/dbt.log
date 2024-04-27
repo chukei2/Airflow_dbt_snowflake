@@ -1,0 +1,55 @@
+[0m12:55:48.792534 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10197a4f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103e15430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103e68a30>]}
+
+
+============================== 12:55:48.794492 | ac2df7d4-f537-45ed-ad09-d63755cdb32a ==============================
+[0m12:55:48.794492 [info ] [MainThread]: Running with dbt=1.5.11
+[0m12:55:48.794781 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'profiles_dir': '/Users/keita.nakata/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m12:58:45.080010 [error] [MainThread]: Encountered an error:
+
+[0m12:58:45.083161 [error] [MainThread]: Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/dbt-snowflake/1.5.7/libexec/lib/python3.9/site-packages/dbt/cli/requires.py", line 86, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/opt/homebrew/Cellar/dbt-snowflake/1.5.7/libexec/lib/python3.9/site-packages/dbt/cli/requires.py", line 71, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/homebrew/Cellar/dbt-snowflake/1.5.7/libexec/lib/python3.9/site-packages/dbt/cli/main.py", line 475, in init
+    results = task.run()
+  File "/opt/homebrew/Cellar/dbt-snowflake/1.5.7/libexec/lib/python3.9/site-packages/dbt/task/init.py", line 288, in run
+    project_name = self.get_valid_project_name()
+  File "/opt/homebrew/Cellar/dbt-snowflake/1.5.7/libexec/lib/python3.9/site-packages/dbt/task/init.py", line 243, in get_valid_project_name
+    name = click.prompt("Enter a name for your project (letters, digits, underscore)")
+  File "/opt/homebrew/Cellar/dbt-snowflake/1.5.7/libexec/lib/python3.9/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "/opt/homebrew/Cellar/dbt-snowflake/1.5.7/libexec/lib/python3.9/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m12:58:45.084837 [debug] [MainThread]: Command `dbt init` failed at 12:58:45.084591 after 176.32 seconds
+[0m12:58:45.085465 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10197a4f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103e68a00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103e68af0>]}
+[0m12:58:45.086199 [debug] [MainThread]: Flushing usage events
+[0m12:58:50.437138 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10681a430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107cb4880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ca4e50>]}
+
+
+============================== 12:58:50.438764 | dee04155-6aa3-4874-8b78-cf2b808abe88 ==============================
+[0m12:58:50.438764 [info ] [MainThread]: Running with dbt=1.5.11
+[0m12:58:50.439039 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/keita.nakata/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m13:01:46.848737 [debug] [MainThread]: Starter project path: /opt/homebrew/Cellar/dbt-snowflake/1.5.7/libexec/lib/python3.9/site-packages/dbt/include/starter_project
+[0m13:03:13.428003 [info ] [MainThread]: Profile airflow written to /Users/keita.nakata/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m13:03:13.429310 [info ] [MainThread]: 
+Your new dbt project "airflow" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m13:03:13.430329 [debug] [MainThread]: Command `dbt init` succeeded at 13:03:13.430178 after 263.01 seconds
+[0m13:03:13.430778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10681a430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ca4e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107cb4b50>]}
+[0m13:03:13.431241 [debug] [MainThread]: Flushing usage events

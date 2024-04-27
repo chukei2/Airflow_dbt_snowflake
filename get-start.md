@@ -2,7 +2,7 @@
 ## ターミナルで次のコマンドを実行してください:
 
 ```
-curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.3.0/docker-compose.yaml'
+curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.9.0/docker-compose.yaml'
 ```
 
 ## 追加されたdocker-compose.yamlのvolumesを次のように置き換えてください:
